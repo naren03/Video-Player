@@ -2,6 +2,8 @@ const video = document.getElementById('video');
 const toggle = document.getElementById('toggle');
 const timestamp = document.getElementById('timestamp');
 const progress = document.getElementById('progress');
+const song1 = document.getElementById('song1');
+const song2 = document.getElementById('song2');
 
 // play and pause using button
 toggle.addEventListener('click', toggleBtn);
@@ -70,4 +72,14 @@ function updateProgress(curValue) {
 
 function changeProgress() {
 	video.currentTime = (progress.value * video.duration) / 100;
+}
+
+song1.addEventListener('click', addToPlayer);
+song2.addEventListener('click', addToPlayer);
+
+function addToPlayer(e) {
+	video.src = e.target.src;
+	video.setAttribute('autoplay', 'true');
+	toggle.classList.remove('fa-play');
+	toggle.classList.add('fa-pause');
 }

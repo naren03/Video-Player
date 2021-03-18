@@ -14,22 +14,39 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<div class="screen">
-			<video id="video" src="assets/video1.mp4"></video>
-			<div class="controls">
-				<div class="playPause"><i id="toggle" class="fas fa-play"></i></div>
-				<input
-					id="progress"
-					type="range"
-					value="0"
-					min="0"
-					max="100"
-					step="1"
-				/>
-				<span id="timestamp" class="timestamp">00:00/00:00</span>
+		<main>
+			<div class="screen">
+				<video id="video" src="assets/video1.mp4"></video>
+				<div class="controls">
+					<div class="playPause"><i id="toggle" class="fas fa-play"></i></div>
+					<input
+						id="progress"
+						type="range"
+						value="0"
+						min="0"
+						max="100"
+						step="1"
+					/>
+					<span id="timestamp" class="timestamp">00:00/00:00</span>
+				</div>
 			</div>
-		</div>
-
+			<div class="playlist">
+				<div id="song1">
+					<video src="assets/video2.mp4"></video>
+				</div>
+				<div class="content1">
+					<h4>Song 2</h4>
+					<p>Song By Jubin Nautiyal</p>
+				</div>
+				<div id="song2">
+					<video src="assets/video3.mp4"></video>
+				</div>
+				<div class="content2">
+					<h4>Song 3</h4>
+					<p>Song By I Dnt Know</p>
+				</div>
+			</div>
+		</main>
 		<script src="index.js"></script>
 	</body>
 </html>
